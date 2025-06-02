@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block titulo %}Editar Oferta{% endblock %}
+
+{% block contenido %}
+  <h2>Editar oferta de empleo</h2>
+  <form method="post" class="formulario">
+    <label for="titulo">Título:</label><br>
+    <input type="text" id="titulo" name="titulo" value="{{ oferta[1] }}" required><br><br>
+    
+    <label for="descripcion">Descripción:</label><br>
+    <textarea id="descripcion" name="descripcion" rows="6" required>{{ oferta[2] }}</textarea><br><br>
+    
+    <input type="submit" value="Actualizar" class="btn-actualizar">
+  </form>
+  <p><a href="/panel" class="btn-volver">Volver al panel</a></p>
+
+  <style>
+    .formulario {
+      max-width: 600px;
+      margin: auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .btn-actualizar {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-actualizar:hover {
+      background-color: #0056b3;
+    }
+    .btn-volver {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #007bff;
+    }
+    .btn-volver:hover {
+      text-decoration: underline;
+    }
+  </style>
+{% endblock %}
+

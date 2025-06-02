@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block titulo %}Panel de Usuario{% endblock %}
+
+{% block contenido %}
+<h2>Bienvenido {{ nombre }} ({{ tipo }})</h2>
+
+<div class="botonera">
+    {% for enlace in enlaces %}
+        <a href="{{ enlace.url }}" class="boton">{{ enlace.texto }}</a>
+    {% endfor %}
+</div>
+{% endblock %}
+

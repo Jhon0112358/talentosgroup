@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block titulo %}Iniciar Sesión{% endblock %}
+
+{% block contenido %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+    <!-- Agregado para cargar CSS desde static -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+<!-- Banner
+    <div class="banner">
+        <img src="{{ url_for('static', filename='img/banner.jpeg') }}" alt="Banner de la página" />
+    </div>-->
+    <!-- Contenedor para estilizar con CSS -->
+    <div class="container">
+        <h1>Registro de Usuario</h1>
+        <form method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required><br><br>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" name="correo" required><br><br>
+
+            <label for="clave">Contraseña:</label>
+            <input type="password" name="clave" required><br><br>
+
+            <label for="tipo">Tipo de usuario:</label>
+            <select name="tipo" required>
+                <option value="candidato">Candidato</option>
+                <option value="empresa">Empresa</option>
+            </select><br><br>
+
+            <input type="submit" value="Registrarse">
+        </form>
+
+        <!-- Mensaje estilizado con clase CSS -->
+        {% if mensaje %}
+            <p class="mensaje-exito">{{ mensaje }}</p>
+        {% endif %}
+
+        <!-- Enlace para ir a login -->
+        <p><a href="{{ url_for('login') }}">¿Ya tienes cuenta? Inicia sesión</a></p>
+    </div>
+</body>
+</html>
+{% if mensaje %}
+    <p style="color:red;">{{ mensaje }}</p>
+{% endif %}
+{% endblock %}
+

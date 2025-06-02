@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}Bolsa de Empleo{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <header class="encabezado">
+        <a href="/" class="logo-link">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Inicio" class="logo">
+        </a>
+        <h1 class="titulo">Gestión de tu Talento Humano</h1>
+    </header>
+
+    <nav class="nav-principal">
+        <a href="/">Inicio</a>
+        <a href="/sobre-nosotros">Sobre Nosotros</a>
+        <a href="/servicios">Servicios</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+
+    <main class="contenido-principal">
+        {% block contenido %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Bolsa de Empleo - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
+
+

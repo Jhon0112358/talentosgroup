@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block titulo %}Iniciar Sesión{% endblock %}
+
+{% block contenido %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Subir Hoja de Vida</title>
+</head>
+<body>
+    <h1>Subir Hoja de Vida (PDF)</h1>
+
+    {% if mensaje %}
+        <p style="color:green;">{{ mensaje }}</p>
+    {% endif %}
+    
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="archivo" accept=".pdf" required><br><br>
+        <input type="submit" value="Subir Hoja de Vida">
+    </form>
+
+    <p><a href="/panel">Volver al panel</a></p>
+</body>
+</html>
+{% if mensaje %}
+    <p style="color:red;">{{ mensaje }}</p>
+{% endif %}
+{% endblock %}

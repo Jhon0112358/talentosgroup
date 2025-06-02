@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block titulo %}Iniciar Sesión{% endblock %}
+
+{% block contenido %}
+<h2>Iniciar Sesión</h2>
+<form method="POST">
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" name="correo" required><br><br>
+
+    <label for="clave">Contraseña:</label><br>
+    <input type="password" name="clave" required><br><br>
+<p style="text-align: right; margin-top: 10px;">
+    <a href="/recuperar-contrasena" class="enlace-olvido">¿Olvidaste tu contraseña?</a>
+</p>
+
+    <input type="submit" value="Iniciar sesión">
+</form>
+
+{% if mensaje %}
+    <p style="color:red;">{{ mensaje }}</p>
+{% endif %}
+{% endblock %}
+
+

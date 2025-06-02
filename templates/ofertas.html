@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block titulo %}Ofertas de Empleo{% endblock %}
+
+{% block contenido %}
+  <div class="ofertas-container">
+    <h2 class="titulo-principal">Ofertas de Empleo Disponibles</h2>
+    <form method="post" class="form-busqueda">
+  <input type="text" name="busqueda" placeholder="Buscar por título o descripción..." value="{{ palabra_clave or '' }}">
+  <button type="submit">Buscar</button>
+</form>
+
+    {% if ofertas %}
+      {% for oferta in ofertas %}
+        <div class="card-oferta">
+          <h3>{{ oferta[1] }}</h3>
+          <p><strong>Empresa:</strong> {{ oferta[3] }}</p>
+          <p><strong>Publicado el:</strong> {{ oferta[4] }}</p>
+          <p>{{ oferta[2] }}</p>
+          {% if session['usuario_tipo'] == 'candidato' %}
+            <a href="/postular/{{ oferta[0] }}" class="btn-postular">Postularse</a>
+          {% endif %}
+	{% if session['usuario_tipo'] == 'empresa' and 		session['usuario_nombre'] == oferta[3] %}
+  <a href="/editar_oferta/{{ oferta[0] }}" class="btn-editar">Editar</a>
+{% endif %}
+{% if session['usuario_tipo'] == 'empresa' and session['usuario_nombre'] == oferta[3] %}
+  <form action="/eliminar_oferta/{{ oferta[0] }}" method="post" style="display:inline;" onsubmit="return confirm('¿Seguro que quieres eliminar esta oferta?');">
+    <button type="submit" class="btn-eliminar">Eliminar</button>
+  </form>
+{% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No hay ofertas disponibles por el momento.</p>
+    {% endif %}
+    <a href="/panel" class="btn-volver">Volver al panel</a>
+  </div>
+
+  <style>
+    .ofertas-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .titulo-principal {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .card-oferta {
+      background: #f9f9f9;
+      border-left: 5px solid #007bff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .btn-postular, .btn-volver {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .btn-postular:hover, .btn-volver:hover {
+      background: #0056b3;
+    }
+  </style>
+{% endblock %}
+

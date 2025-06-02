@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicio - TalentosGroup{% endblock %}
+
+{% block contenido %}
+<div class="inicio-bienvenida">
+    <h1>Bienvenido a TalentosGroup</h1>
+    <p>Conectamos el talento con las mejores oportunidades laborales. Encuentra el empleo ideal o al candidato perfecto.</p>
+
+    <div class="botones">
+        <a href="/registro" class="btn">Registrarse</a>
+        <a href="/login" class="btn btn-secundario">Iniciar Sesión</a>
+    </div>
+</div>
+
+<hr>
+
+<div class="servicios">
+    <div class="servicio">
+        <img src="{{ url_for('static', filename='marketing.jpeg') }}" alt="Marketing de Atracción">
+        <h3>Marketing de Atracción</h3>
+        <p>Generamos afinidad entre candidatos y cargos, atrayendo al perfil ideal.</p>
+    </div>
+    <div class="servicio">
+        <img src="{{ url_for('static', filename='seleccion.jpeg') }}" alt="Selección">
+        <h3>Selección</h3>
+        <p>Identificamos necesidades, levantamos información y diseñamos focos de valor.</p>
+    </div>
+    <div class="servicio">
+        <img src="{{ url_for('static', filename='contratacion.jpeg') }}" alt="Contratación">
+        <h3>Contratación</h3>
+        <p>Vinculamos personal minimizando tiempos y costos.</p>
+    </div>
+</div>
+{% endblock %}
+

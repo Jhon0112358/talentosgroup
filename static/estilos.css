@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("../static/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #e6f0ff; /* Color de fondo por si no carga la imagen */
+    color: #333;
+}
+
+
+
+header.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.titulo {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+.banner {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-principal {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #343a40;
+    color: #ccc;
+    margin-top: 30px;
+}
+.nav-principal {
+    background-color: #004085;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-principal a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-principal a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #004085;
+}
+.nosotros-contenedor {
+    padding: 30px;
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.imagen-equipo {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mision-vision {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.caja {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.valores ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+.inicio-bienvenida {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-secundario {
+    background-color: #6c757d;
+}
+
+.btn-secundario:hover {
+    background-color: #5a6268;
+}
+
+.servicios {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.servicio {
+    flex: 1 1 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.servicio img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.enlace-olvido {
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.enlace-olvido:hover {
+    text-decoration: underline;
+}
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.form-contacto button {
+    background-color: #004085;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-contacto button:hover {
+    background-color: #003067;
+}
+
+.redes-sociales {
+    margin-top: 30px;
+}
+
+.redes-sociales p {
+    font-weight: bold;
+}
+
+.icono-red {
+    width: 40px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+.form-busqueda {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-busqueda input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.form-busqueda button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.form-busqueda button:hover {
+  background-color: #0056b3;
+}
+.btn-editar {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 8px 15px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.btn-editar:hover {
+  background: #1e7e34;
+}
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.btn-eliminar:hover {
+  background-color: #a71d2a;
+}
+

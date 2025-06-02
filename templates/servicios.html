@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block titulo %}Servicios{% endblock %}
+
+{% block contenido %}
+    <h2>¿Qué ofrecemos?</h2>
+    <p>En <strong>TalentosGroup</strong>, ofrecemos soluciones integrales para la gestión del talento humano en las organizaciones.</p>
+
+    <section class="servicio">
+        <img src="{{ url_for('static', filename='seleccion2.jpeg') }}" alt="Selección de Talento" class="imagen-servicio">
+        <div>
+            <h3>Selección y Evaluación del Talento Humano</h3>
+            <p>Contamos con procesos estructurados para identificar candidatos que se alineen con el perfil del cargo, garantizando afinidad, competencias y cultura organizacional.</p>
+        </div>
+    </section>
+
+    <section class="servicio">
+        <img src="{{ url_for('static', filename='capital_humano.jpeg') }}" alt="Capital Humano" class="imagen-servicio">
+        <div>
+            <h3>Administración del Capital Humano</h3>
+            <p>Apoyamos a las empresas en la gestión integral de su recurso humano: contratación, nómina, bienestar y desarrollo organizacional.</p>
+        </div>
+    </section>
+
+    <section class="servicio">
+        <img src="{{ url_for('static', filename='consultoria.jpeg') }}" alt="Consultoría Organizacional" class="imagen-servicio">
+        <div>
+            <h3>Consultoría Organizacional</h3>
+            <p>Brindamos asesoría estratégica en estructuras organizacionales, clima laboral, liderazgo, gestión del cambio y desarrollo del talento.</p>
+        </div>
+    </section>
+
+    <style>
+        .servicio {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .imagen-servicio {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        .servicio div {
+            flex: 1;
+            min-width: 250px;
+        }
+        h3 {
+            margin-top: 0;
+            color: #004085;
+        }
+    </style>
+{% endblock %}
+
+

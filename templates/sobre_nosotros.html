@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block titulo %}Sobre Nosotros{% endblock %}
+
+{% block contenido %}
+<div class="nosotros-contenedor">
+    <section class="intro">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+            En <strong>TalentosGroup</strong>, creemos que cada persona merece la oportunidad de encontrar su lugar en el mundo laboral. 
+            Nuestra misión es unir a profesionales calificados con empresas que buscan talento auténtico y comprometido.
+        </p>
+        <img src="{{ url_for('static', filename='nosotros.jpeg') }}" alt="Equipo" class="imagen-equipo">
+    </section>
+
+    <section class="mision-vision">
+        <div class="caja">
+            <h3>Misión</h3>
+            <p>Facilitar el acceso a oportunidades laborales mediante una plataforma ágil, confiable y centrada en las personas.</p>
+        </div>
+        <div class="caja">
+            <h3>Visión</h3>
+            <p>Ser el puente más sólido entre el talento y el mercado laboral en toda la región latinoamericana.</p>
+        </div>
+    </section>
+
+    <section class="valores">
+        <h3>Nuestros valores</h3>
+        <ul>
+            <li>✅ Compromiso</li>
+            <li>🤝 Confianza</li>
+            <li>🚀 Innovación</li>
+            <li>💬 Transparencia</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}
+
+

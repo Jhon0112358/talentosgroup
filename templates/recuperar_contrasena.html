@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %}Recuperar Contraseña{% endblock %}
+
+{% block contenido %}
+<h2>Recuperar Contraseña</h2>
+<p>Ingresa tu correo electrónico y te enviaremos instrucciones para restablecer tu contraseña.</p>
+
+<form method="POST">
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" name="correo" required>
+    <br><br>
+    <button type="submit">Enviar instrucciones</button>
+</form>
+{% endblock %}
+
